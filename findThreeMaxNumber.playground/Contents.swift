@@ -6,9 +6,7 @@ func greatestThree(numbers: [Int]) -> Int {
     var first = numbers[0]
     var second = 0
     var third = 0
-    var num = 0
     for i in 0...numbers.count-1 {
-        num = numbers[i]
         if numbers[i] > first {
             third = second
             second = first
@@ -22,7 +20,6 @@ func greatestThree(numbers: [Int]) -> Int {
             third == numbers[i]
         }
     }
-    
     return first * second * third
 }
 greatestThree(numbers: [1, 3, 2, 5, 7, 4, 9, 11])
