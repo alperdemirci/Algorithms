@@ -1,7 +1,7 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
-// check out the video https://www.youtube.com/watch?v=beQEimO3-3E
+
 //    10
 //    /\
 //   5   14
