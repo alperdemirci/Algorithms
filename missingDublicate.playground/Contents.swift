@@ -8,7 +8,7 @@ import UIKit
 func MissingDublicate (dublicateArray: [Int]) -> [Int] {
     
     var arrayItemsWithCount = [Int: Int]()
-    var missingNumberIs = [Int]()
+    var missingNumberArray = [Int]()
     for (key, num) in dublicateArray.enumerated() {
         if let count = arrayItemsWithCount[num] {
             arrayItemsWithCount[num] = count + 1
@@ -16,13 +16,14 @@ func MissingDublicate (dublicateArray: [Int]) -> [Int] {
             arrayItemsWithCount[num] = 1
         }
     }
+    
     for (key, value) in arrayItemsWithCount {
         if value == 1 {
-            missingNumberIs.append(key)
+            missingNumberArray.append(key)
         }
     }
-    return missingNumberIs
+    return missingNumberArray.sorted() //sorted method is optional in this case
 }
 
-let missingNumberIs = MissingDublicate(dublicateArray: [1, 1, 2, 2, 3, 3, 4, 5, 6, 4])
-print("The missing numbers are:", missingNumberIs)
+let missingNumber = MissingDublicate(dublicateArray: [1, 2, 3, 4, 1, 2, 5])
+print("The missing numbers are:", missingNumber)
