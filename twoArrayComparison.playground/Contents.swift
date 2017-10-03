@@ -14,12 +14,12 @@ func SortingCarParking(parkedArray: [Int]) -> [Int] {
         for i in index...parkedArray.count-1 {
             if correctArray[i] == parkedArray[y] {
                 if y != i {
-                    //parkedArray.swapAt(y, i)
+//                  parkedArray.swapAt(y, i)
                     let temp = parkedArray[y]
                     parkedArray[y] = parkedArray[i]
                     parkedArray[i] = temp
                 }
-                y = 0
+                y = i + 1
                 index = i + 1
             } else {
                 y += 1
@@ -31,8 +31,8 @@ func SortingCarParking(parkedArray: [Int]) -> [Int] {
     return parkedArray
 }
 
-let correctParking = SortingCarParking(parkedArray: [1, 2, 3, 7, 6, 4, 2, 0])
-print(correctParking)
+let theCorrectParking = SortingCarParking(parkedArray: [0, 1, 2, 3, 7, 6, 4, 5])
+print("this is the answer: ", theCorrectParking)
 
 
 
